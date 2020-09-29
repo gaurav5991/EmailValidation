@@ -15,7 +15,7 @@ public class EmailValidation
 		System.out.println("Enter the pattern to be validated");
 		String patternToBeValidated = scan.nextLine();
 
-		Pattern pattern = Pattern.compile("[a-zA-Z0-9]+[[._+-][a-zA-Z0-9]]*@[a-zA-Z0-9]+[.][a-zA-Z]{2,4}");
+		Pattern pattern = Pattern.compile("[a-zA-Z0-9]+[[._+-][a-zA-Z0-9]]*@[a-zA-Z0-9]+([.][a-zA-Z]{2,4})([.][a-zA-Z]{2,4})?");
 		Matcher match = pattern.matcher(patternToBeValidated);
 		
 		if(match.matches())
