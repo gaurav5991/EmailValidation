@@ -12,10 +12,10 @@ public class EmailValidation
 		
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Enter the first mandatory part to be validated");
+		System.out.println("Enter the first and second mandatory part to be validated");
 		String patternToBeValidated = scan.nextLine();
 
-		Pattern pattern = Pattern.compile("[a-zA-Z0-9]+");
+		Pattern pattern = Pattern.compile("[a-zA-Z0-9]+@[a-zA-Z0-9]+");
 		Matcher match = pattern.matcher(patternToBeValidated);
 		
 		if(match.matches())
